@@ -1,0 +1,26 @@
+<div class="ui-g-12">
+  <div class="ui-g-10"></div>
+  <div class="ui-g-2"><button pButton type="button" label="Ekle" icon="fa fa-plus"></button></div>
+  <div class="ui-g-12">
+
+    <p-table [value]="lessonList.lessonList">
+      <ng-template pTemplate="header">
+        <tr>
+          <th>İd</th>
+          <th>Code</th>
+          <th>Name</th>
+          <th></th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-st>
+        <tr>
+          <td>{{st.id}}</td>
+          <td>{{st.code}}</td>
+          <td>{{st.name}}</td>
+
+          <td><button pButton type="button" label="Güncelle"></button></td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>
+</div>
