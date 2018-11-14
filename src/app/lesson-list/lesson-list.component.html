@@ -1,9 +1,9 @@
 <div class="ui-g-12">
   <div class="ui-g-10"></div>
-  <div class="ui-g-2"><button pButton type="button" label="Ekle" icon="fa fa-plus"></button></div>
+  <div class="ui-g-2"><button pButton type="button" label="Ekle" icon="fa fa-plus" (click)="addLesson()"></button></div>
   <div class="ui-g-12">
 
-    <p-table [value]="lessonList.lessonList">
+    <p-table [value]="lessonList">
       <ng-template pTemplate="header">
         <tr>
           <th>İd</th>

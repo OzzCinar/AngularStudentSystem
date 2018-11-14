@@ -1,0 +1,13 @@
+<div class="ui-g-12">
+  <span class="ui-float-label">
+    <input id="float-input" pInputText [(ngModel)]="model.code" type="text" size="30" pInputText>
+    <label for="float-input">Code</label>
+  </span>
+</div>
+<div class="ui-g-12">
+  <span class="ui-float-label">
+    <input id="float-input" pInputText [(ngModel)]="model.name" type="text" size="30" pInputText>
+    <label for="float-input">Adı</label>
+  </span>
+</div>
+<button pButton type="button" label="Kaydet"(click)="save()"></button>

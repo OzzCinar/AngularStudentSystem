@@ -1,10 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MenuModule} from 'primeng/menu';
-import {TableModule} from 'primeng/table';
-import {Routes, RouterModule} from '@angular/router'
-import {ButtonModule} from 'primeng/button';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MenuModule } from 'primeng/menu';
+import { TableModule } from 'primeng/table';
+import { Routes, RouterModule } from '@angular/router'
+import { ButtonModule } from 'primeng/button';
+import { InputTextModule } from 'primeng/inputtext';
+
 
 
 
@@ -14,12 +16,10 @@ import { StudentListComponent } from './student-list/student-list.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { AddStudentComponent } from './add-student/add-student.component';
 import { LessonListComponent } from './lesson-list/lesson-list.component';
-
-const routes :Routes=[
-{path: "studentList", component:StudentListComponent},
-{path: "lessonList", component:LessonListComponent}
-
-]
+import { FormsModule } from '@angular/forms';
+import { UpdateStudentComponent } from './update-student/update-student.component';
+import { UpdateLessonComponent } from './update-lesson/update-lesson.component';
+import { AddLessonComponent } from './add-lesson/add-lesson.component';
 
 
 @NgModule({
@@ -28,7 +28,10 @@ const routes :Routes=[
     MenuComponent,
     StudentListComponent,
     AddStudentComponent,
-    LessonListComponent
+    LessonListComponent,
+    UpdateStudentComponent,
+    UpdateLessonComponent,
+    AddLessonComponent
   ],
   imports: [
     BrowserModule,
@@ -36,8 +39,9 @@ const routes :Routes=[
     MenuModule,
     TableModule,
     AppRoutingModule,
-    RouterModule.forRoot(routes),
-    ButtonModule
+    ButtonModule,
+    InputTextModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

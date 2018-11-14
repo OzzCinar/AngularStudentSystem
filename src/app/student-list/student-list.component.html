@@ -1,9 +1,9 @@
 <div class="ui-g-12">
   <div class="ui-g-10"></div>
-  <div class="ui-g-2"><button pButton type="button" class="ui-button-danger" label="Ekle" icon="fa fa-plus"></button></div>
+  <div class="ui-g-2"><button pButton type="button" class="ui-button-danger" label="Ekle" icon="fa fa-plus" (click)="route()"></button></div>
   <div class="ui-g-12">
 
-    <p-table [value]="studentsList.studentList">
+    <p-table [value]="studentsList">
       <ng-template pTemplate="header">
         <tr>
           <th>İd</th>
@@ -19,7 +19,7 @@
           <td>{{st.nationalId}}</td>
           <td>{{st.name}}</td>
           <td>{{st.surname}}</td>
-          <td><button pButton type="button" label="Güncelle"></button></td>
+          <td><button pButton type="button" label="Güncelle" (click)="route1(st)"></button></td>
         </tr>
       </ng-template>
     </p-table>

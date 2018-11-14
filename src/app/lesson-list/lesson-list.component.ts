@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Lists } from '../student-list/student';
+import { Lists, Lesson } from '../student-list/student';
+import { Route } from '@angular/compiler/src/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-lesson-list',
@@ -7,10 +9,17 @@ import { Lists } from '../student-list/student';
   styleUrls: ['./lesson-list.component.css']
 })
 export class LessonListComponent implements OnInit {
-  lessonList:Lists=new Lists();
-  constructor() { }
+  lessonList:Lesson[];
+  constructor(private router:Router) { }
 
   ngOnInit() {
+    this.lessonList=Lists.lessonList;
+  }
+  route(){
+    this.router.navigate(["/addLesson"])
+  }
+  addLesson(){
+    this.router.navigate(["/addLesson"])
   }
 
 }

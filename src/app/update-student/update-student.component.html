@@ -10,10 +10,11 @@
     <label for="float-input">Soyad</label>
   </span>
 </div>
+<!-- <label>{{model.nationalId}}</label> -->
 <div class="ui-g-12">
   <span class="ui-float-label">
     <input id="float-input" pInputText [(ngModel)]="model.nationalId" type="text" size="30" pInputText>
-    <label for="float-input">T.C. Kimlik No</label>
+    <label for="float-input"><label>{{model.nationalId}}</label></label>
   </span>
 </div>
 <button pButton type="button" label="Geri Git" (click)="goBack()"></button>
